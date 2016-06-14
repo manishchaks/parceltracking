@@ -1,0 +1,210 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "version" : "2.0",
+    "x-WM-SERVICE_TYPE" : "RestService",
+    "x-WM-API_ID" : "1d0dce1e-ad30-468c-be98-d77715c3ff28",
+    "x-WM-SERVICE_ID" : "reportallusa"
+  },
+  "host" : "reportallusa.com",
+  "basePath" : "/api/parcels.php",
+  "tags" : [ {
+    "name" : "RestServiceVirtualController",
+    "description" : "Rest service swagger documentation"
+  } ],
+  "schemes" : [ "https" ],
+  "paths" : {
+    "" : {
+      "get" : {
+        "tags" : [ "RestServiceVirtualController" ],
+        "operationId" : "reportallusa_RestServiceVirtualController-invoke",
+        "consumes" : [ "text/xml" ],
+        "parameters" : [ {
+          "name" : "v",
+          "in" : "query",
+          "description" : "v",
+          "required" : false,
+          "type" : "string",
+          "format" : "string",
+          "x-WM-EDITABLE" : false
+        }, {
+          "name" : "client",
+          "in" : "query",
+          "description" : "client",
+          "required" : false,
+          "type" : "string",
+          "format" : "string",
+          "x-WM-EDITABLE" : false
+        }, {
+          "name" : "spatial_intersect",
+          "in" : "query",
+          "description" : "spatial_intersect",
+          "required" : false,
+          "type" : "string",
+          "format" : "string",
+          "x-WM-EDITABLE" : false
+        }, {
+          "name" : "si_srid",
+          "in" : "query",
+          "description" : "si_srid",
+          "required" : false,
+          "type" : "string",
+          "format" : "string",
+          "x-WM-EDITABLE" : false
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Success",
+            "schema" : {
+              "$ref" : "#/definitions/RootResponse"
+            }
+          }
+        },
+        "x-WM-METHOD_NAME" : "invoke",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY"
+      },
+      "x-WM-TAG" : "RestServiceVirtualController",
+      "x-WM-BASE_PATH" : "/api/parcels.php",
+      "x-WM-RELATIVE_PATH" : ""
+    }
+  },
+  "definitions" : {
+    "RootResponse" : {
+      "properties" : {
+        "count" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "rpp" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "results" : {
+          "type" : "array",
+          "uniqueItems" : false,
+          "items" : {
+            "$ref" : "#/definitions/resultsEntryItem"
+          },
+          "x-WM-IS_LIST" : true
+        },
+        "status" : {
+          "type" : "string"
+        },
+        "page" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "query" : {
+          "type" : "string"
+        }
+      },
+      "x-WM-FULLY_QUALIFIED_NAME" : "reportallusa.RootResponse",
+      "x-WM-TAGS" : [ "RestServiceVirtualController" ]
+    },
+    "resultsEntryItem" : {
+      "properties" : {
+        "census_zip" : {
+          "type" : "string"
+        },
+        "physcity" : {
+          "type" : "string"
+        },
+        "mkt_val_bldg" : {
+          "type" : "string"
+        },
+        "addr_street_suffix" : {
+          "type" : "string"
+        },
+        "mkt_val_tot" : {
+          "type" : "string"
+        },
+        "land_use_class" : {
+          "type" : "string"
+        },
+        "muni_id" : {
+          "type" : "string"
+        },
+        "bldg_sqft" : {
+          "type" : "string"
+        },
+        "acreage_deeded" : {
+          "type" : "string"
+        },
+        "state_abbr" : {
+          "type" : "string"
+        },
+        "acreage_calc" : {
+          "type" : "string"
+        },
+        "mail_name" : {
+          "type" : "string"
+        },
+        "physzip" : {
+          "type" : "string"
+        },
+        "mkt_val_land" : {
+          "type" : "string"
+        },
+        "land_use_code" : {
+          "type" : "string"
+        },
+        "addr_street_type" : {
+          "type" : "string"
+        },
+        "parcel_id" : {
+          "type" : "string"
+        },
+        "ngh_code" : {
+          "type" : "string"
+        },
+        "muni_name" : {
+          "type" : "string"
+        },
+        "sale_price" : {
+          "type" : "string"
+        },
+        "geom_as_wkt" : {
+          "type" : "string"
+        },
+        "mail_address2" : {
+          "type" : "string"
+        },
+        "mail_address3" : {
+          "type" : "string"
+        },
+        "mail_address1" : {
+          "type" : "string"
+        },
+        "addr_street_prefix" : {
+          "type" : "string"
+        },
+        "addr_number" : {
+          "type" : "string"
+        },
+        "school_dist_id" : {
+          "type" : "string"
+        },
+        "trans_date" : {
+          "type" : "string"
+        },
+        "story_height" : {
+          "type" : "string"
+        },
+        "county_id" : {
+          "type" : "string"
+        },
+        "addr_street_name" : {
+          "type" : "string"
+        },
+        "owner" : {
+          "type" : "string"
+        },
+        "county_name" : {
+          "type" : "string"
+        }
+      },
+      "x-WM-FULLY_QUALIFIED_NAME" : "reportallusa.resultsEntryItem",
+      "x-WM-TAGS" : [ "RestServiceVirtualController" ]
+    }
+  }
+}

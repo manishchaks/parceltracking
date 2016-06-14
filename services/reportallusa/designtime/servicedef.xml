@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<service xmlns="http://www.activegrid.com/namespaces/ServiceDefinitions/1.0" id="reportallusa" type="RestService" springFile="reportallusa.spring.xml">
+    <operation name="invoke">
+        <parameter name="v" typeRef="java.lang.String" isList="false"/>
+        <parameter name="client" typeRef="java.lang.String" isList="false"/>
+        <parameter name="spatial_intersect" typeRef="java.lang.String" isList="false"/>
+        <parameter name="si_srid" typeRef="java.lang.String" isList="false"/>
+        <return typeRef="reportallusa.RootResponse" isList="false"/>
+    </operation>
+    <dataobjects>
+        <dataobject javaType="reportallusa.resultsEntryItem" name="resultsEntryItem" supportsQuickData="false">
+            <element name="physcity" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="census_zip" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="mkt_val_bldg" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="addr_street_suffix" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="mkt_val_tot" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="muni_id" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="land_use_class" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="acreage_deeded" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="bldg_sqft" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="state_abbr" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="acreage_calc" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="mail_name" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="physzip" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="mkt_val_land" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="land_use_code" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="addr_street_type" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="parcel_id" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="ngh_code" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="sale_price" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="muni_name" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="geom_as_wkt" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="mail_address2" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="mail_address3" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="addr_street_prefix" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="mail_address1" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="school_dist_id" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="addr_number" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="trans_date" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="story_height" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="addr_street_name" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="county_id" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="owner" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="county_name" typeRef="java.lang.String" isList="false" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="reportallusa.RootResponse" name="RootResponse" supportsQuickData="false">
+            <element name="results" typeRef="reportallusa.resultsEntryItem" isList="true" allowNull="false"/>
+            <element name="rpp" typeRef="java.lang.Integer" isList="false" allowNull="false"/>
+            <element name="count" typeRef="java.lang.Integer" isList="false" allowNull="false"/>
+            <element name="page" typeRef="java.lang.Integer" isList="false" allowNull="false"/>
+            <element name="status" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="query" typeRef="java.lang.String" isList="false" allowNull="false"/>
+        </dataobject>
+    </dataobjects>
+</service>

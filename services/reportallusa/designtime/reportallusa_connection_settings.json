@@ -1,0 +1,33 @@
+{
+  "endpointAddress" : "https://reportallusa.com/api/parcels.php",
+  "method" : "GET",
+  "contentType" : "text/xml",
+  "requestBody" : "",
+  "authType" : "NONE",
+  "headers" : { },
+  "queryParams" : {
+    "v" : "2",
+    "client" : "DBGUwzBN1o",
+    "spatial_intersect" : "POINT(-122.41803646087646 48.03066149682446)",
+    "si_srid" : "4326"
+  },
+  "sampleRestResponse" : {
+    "responseBody" : "{\"status\":\"OK\",\"count\":1,\"page\":1,\"rpp\":10,\"results\":[{\"parcel_id\":\"123413\",\"county_id\":\"53029\",\"county_name\":\"Island\",\"muni_name\":\"South Whidbey\",\"state_abbr\":\"WA\",\"addr_number\":null,\"addr_street_prefix\":null,\"addr_street_name\":\"88\",\"addr_street_suffix\":null,\"addr_street_type\":\"\",\"physcity\":null,\"physzip\":null,\"census_zip\":\"98260\",\"owner\":null,\"mail_name\":null,\"mail_address1\":null,\"mail_address2\":null,\"mail_address3\":\"LANGLEY WA 98260\",\"trans_date\":null,\"sale_price\":null,\"mkt_val_land\":\"200000.00\",\"mkt_val_bldg\":\"0.00\",\"mkt_val_tot\":\"200000.00\",\"bldg_sqft\":null,\"ngh_code\":null,\"land_use_code\":null,\"land_use_class\":null,\"story_height\":null,\"muni_id\":\"1939637\",\"school_dist_id\":\"5308190\",\"acreage_deeded\":null,\"acreage_calc\":\"19.88\",\"geom_as_wkt\":\"MULTIPOLYGON(((-122.418402086444 48.0322668584686,-122.417026805037 48.032239323402,-122.41691237535 48.0312784008613,-122.416684566025 48.0293652730827,-122.416572190775 48.0284215047878,-122.419178999829 48.0284927667244,-122.41952854377 48.0322893984284,-122.418402086444 48.0322668584686)))\"}],\"query\":\"client=DBGUwzBN1o&v=2&spatial_intersect=POINT(-122.41803646087646%2048.03066149682446)&si_srid=4326\"}",
+    "convertedResponse" : null,
+    "statusCode" : 200,
+    "responseHeaders" : {
+      "X-Frame-Options" : [ "SAMEORIGIN" ],
+      "Access-Control-Allow-Origin" : [ "*" ],
+      "Date" : [ "Tue, 14 Jun 2016 06:00:41 GMT" ],
+      "Content-Length" : [ "1163" ],
+      "Keep-Alive" : [ "timeout=5, max=100" ],
+      "Content-Type" : [ "application/json" ],
+      "Connection" : [ "Keep-Alive" ],
+      "X-Powered-By" : [ "PHP/5.6.9" ],
+      "Server" : [ "Apache/2.4.10 (Debian)" ]
+    },
+    "contentType" : "application/json",
+    "cookies" : [ ]
+  },
+  "redirectEnabled" : true
+}
