@@ -1,12 +1,13 @@
 <wm-page data-ng-controller="MainPageController" name="mainpage" pagetitle="Main">
     <wm-header content="header" name="header" height="auto"></wm-header>
-    <wm-top-nav name="topnav" content="topnav"></wm-top-nav>
     <wm-content name="content">
-        <wm-left-panel columnwidth="2" name="leftpanel" content="leftnav"></wm-left-panel>
-        <wm-page-content padding="unset 15px" columnwidth="8" name="mainContent">
-            <wm-prefab name="googlemaps1" prefabname="googlemaps"></wm-prefab>
+        <wm-page-content padding="unset 15px" columnwidth="12" name="mainContent">
+            <wm-html name="html1" autoscroll="true" width="100%" height="100%">
+                <div id="gMapsDiv" style="height: 500px;width:100%">
+                    <h3>Maps loads here</h3>
+                </div>
+            </wm-html>
         </wm-page-content>
-        <wm-right-panel columnwidth="2" name="rightpanel" content="rightnav"></wm-right-panel>
     </wm-content>
     <wm-footer name="footer" content="footer"></wm-footer>
 </wm-page>
