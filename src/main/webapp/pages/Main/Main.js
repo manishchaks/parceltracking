@@ -8,8 +8,8 @@ Application.$controller("MainPageController", ["$scope", function($scope) {
         var GOOGLE_MAPS_API_KEY = "AIzaSyBzs_6EsdrgAmboMDgXKFm0_Iv_78EE-_Y";
 
         var map;
-        var contentString = "parcel_id: 803266\n county_id: 53029 \n county_name: Island \n muni_name: South Whidbey \n state_abbr: WA \n addr_street_name: 88 \n addr_street_type: \n census_zip: 98260\n mail_address3: LANGLEY WA 98260\n mkt_val_land: 235000.00 \n mkt_val_bldg: 0.00 \n mkt_val_tot: 235000.00 \n muni_id: 1939637 \n school_dist_id: 5308190 \n acreage_calc: 25.44\n";
 
+        var contentString = "parcel_id: 803266<br> county_id: 53029 <br> county_name: Island <br> muni_name: South Whidbey <br> state_abbr: WA <br> addr_street_name: 88 <br> addr_street_type: <br> census_zip: 98260<br> mail_address3: LANGLEY WA 98260<br> mkt_val_land: 235000.00 <br> mkt_val_bldg: 0.00 <br> mkt_val_tot: 235000.00 <br> muni_id: 1939637 <br> school_dist_id: 5308190 <br> acreage_calc: 25.44<br>";
         // Initalize Google Maps API
         function initMap() {
             map = new google.maps.Map(document.getElementById('gMapsDiv'), {
@@ -32,11 +32,9 @@ Application.$controller("MainPageController", ["$scope", function($scope) {
         function updateLatLong(lat, long) {
                 // the data has to be of the form
                 $scope.Widgets.pointLabel.caption = "POINT(" + lat + " " + long + ")";
-                $scope.Widgets.pointText.val = "POINT(" + lat + " " + long + ")";
-                // $scope.Variables.svPointData.setData("POINT(" + lat + " " + long + ")");
-                // console.log($scope.Variables.svPointData.getData());
+                $scope.Variables.svPointData.setData("POINT(" + lat + " " + long + ")");
+                console.log("svPointData set to" + $scope.Variables.svPointData.getData());
                 // $scope.Variables.svReportallUsa.update()
-
             }
             // method to load script, after all WM scripts have loaded. Uses JQuery
         function loadScript(scriptUrl) {
