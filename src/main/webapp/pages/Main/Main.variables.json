@@ -1,0 +1,43 @@
+{
+  "svReportallUsa" : {
+    "_id" : "wm-svReportallUsa-wm.ServiceVariable-1466052603527",
+    "name" : "svReportallUsa",
+    "owner" : "Page",
+    "category" : "wm.ServiceVariable",
+    "dataBinding" : [ {
+      "target" : "v",
+      "value" : "2",
+      "type" : "string"
+    }, {
+      "target" : "client",
+      "value" : "DBGUwzBN1o",
+      "type" : "string"
+    }, {
+      "target" : "spatial_intersect",
+      "value" : "bind:Widgets.pointLabel.caption",
+      "type" : "string"
+    }, {
+      "target" : "si_srid",
+      "value" : "4326",
+      "type" : "string"
+    } ],
+    "type" : "reportallusa.RootResponse",
+    "service" : "reportallusa",
+    "operation" : "invoke",
+    "operationId" : "reportallusa_RestServiceVirtualController-invoke",
+    "operationType" : "get",
+    "serviceType" : "RestService",
+    "dataSet" : [ ],
+    "isList" : false,
+    "firstRow" : 0,
+    "maxResults" : 20,
+    "designMaxResults" : 10,
+    "startUpdate" : false,
+    "autoUpdate" : true,
+    "onSuccess" : "Javascript",
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "controller" : "RestServiceVirtual"
+  }
+}

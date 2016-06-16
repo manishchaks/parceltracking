@@ -2,11 +2,17 @@
     <wm-header content="header" name="header" height="auto"></wm-header>
     <wm-content name="content">
         <wm-page-content padding="unset 15px" columnwidth="12" name="mainContent">
-            <wm-html name="html1" autoscroll="true" width="100%" height="100%">
+            <wm-html name="html1" autoscroll="true" width="100%" height="90%">
                 <div id="gMapsDiv" style="height: 500px;width:100%">
                     <h3>Maps loads here</h3>
                 </div>
             </wm-html>
+            <wm-label name="pointLabel" caption="pointLabel"></wm-label>
+            <wm-composite name="composite1">
+                <wm-container class="col-md-9" name="container1">
+                    <wm-text name="pointText"></wm-text>
+                </wm-container>
+            </wm-composite>
         </wm-page-content>
     </wm-content>
     <wm-footer name="footer" content="footer"></wm-footer>

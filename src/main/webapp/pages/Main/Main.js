@@ -22,15 +22,42 @@ Application.$controller("MainPageController", ["$scope", function($scope) {
 
         // method to intialize a Map
         var map;
+        var contentString = "parcel_id: 803266\n county_id: 53029 \n county_name: Island \n muni_name: South Whidbey \n state_abbr: WA \n addr_street_name: 88 \n addr_street_type: \n census_zip: 98260\n mail_address3: LANGLEY WA 98260\n mkt_val_land: 235000.00 \n mkt_val_bldg: 0.00 \n mkt_val_tot: 235000.00 \n muni_id: 1939637 \n school_dist_id: 5308190 \n acreage_calc: 25.44\n";
+        // This will come from the parcel API
 
         function initMap() {
             map = new google.maps.Map(document.getElementById('gMapsDiv'), {
-                center: {
-                    lat: -34.397,
-                    lng: 150.644
-                },
-                zoom: 8
+                center: new google.maps.LatLng(48.03, -122.4),
+                zoom: 15,
+                mapTypeId: google.maps.MapTypeId.ROADMAP
             });
+
+
+
+            map.addListener('click', function(event) {
+                var infowindow = new google.maps.InfoWindow({
+                    content: contentString,
+                    position: event.latLng
+                });
+
+                infowindow.open(map);
+                updateLatLong(event.latLng.lat(), event.latLng.lng());
+
+            })
+
+        }
+
+        function updateLatLong(lat, long) {
+            console.log("Lat:" + lat)
+            console.log("Long:" + long)
+
+            // the data has to be of the form
+            $scope.Widgets.pointLabel.caption = "POINT(" + lat + " " + long + ")";
+            $scope.Widgets.pointText.val = "POINT(" + lat + " " + long + ")";
+            // $scope.Variables.svPointData.setData("POINT(" + lat + " " + long + ")");
+            // console.log($scope.Variables.svPointData.getData());
+            // $scope.Variables.svReportallUsa.update()
+
         }
 
         // method to load script, after all WM scripts have loaded. Uses JQuery
@@ -43,8 +70,18 @@ Application.$controller("MainPageController", ["$scope", function($scope) {
 
         }
 
-        // Load Google Maps with given API KEY. Call initMap() method once loaded. 
-        loadScript("https://maps.googleapis.com/maps/api/js?key=" + GOOGLE_MAPS_API_KEY);
+        // Load Google Maps with given API KEY. Call initMap() method once
+        // loaded.
+        loadScript("https://maps.googleapis.com/maps/api/js?key=" + GOOGLE_MAPS_API_KEY)
+    }
+
+
+
+
+    $scope.svReportallUsaonSuccess = function(variable, data) {
+        console.log("Success");
+        console.log(data);
+
     };
 
 }]);

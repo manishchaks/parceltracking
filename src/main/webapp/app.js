@@ -17,4 +17,13 @@ Application.run(function ($rootScope) {
          * if a different user logs in, app will be reloaded and user is redirected to respective landing page configured in Security.
          */
     };
+
+	$rootScope.svReportallUsaonSuccess = function(variable, data){
+			
+	};
+
+	$rootScope.svReportallUsaonError = function(variable, data){
+			
+	};
+
 });
