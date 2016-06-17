@@ -34,7 +34,7 @@ Application.$controller("MainPageController", ["$scope", function($scope) {
                 $scope.Widgets.pointLabel.caption = "POINT(" + lat + " " + long + ")";
                 $scope.Variables.svPointData.setData("POINT(" + lat + " " + long + ")");
                 console.log("svPointData set to" + $scope.Variables.svPointData.getData());
-                // $scope.Variables.svReportallUsa.update()
+                $scope.Variables.svReportallUsa.update()
             }
             // method to load script, after all WM scripts have loaded. Uses JQuery
         function loadScript(scriptUrl) {
